@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Токен вашего бота
 TOKEN = os.getenv("8102277034:AAHPL3s9zgMGGpz3AxR7w3vw-8Zd5pS9_qI")
 print(f"TOKEN is: {TOKEN}")
-bot = telegram.Bot(token="8102277034:AAHPL3s9zgMGGpz3AxR7w3vw-8Zd5pS9_qI")
+bot = telegram.Bot(token=TOKEN)
 
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
@@ -31,3 +31,5 @@ def index():
 
 if __name__ == "__main__":
     app.run(threaded=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
