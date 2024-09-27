@@ -8,7 +8,7 @@ app = Flask(__name__)
 # Токен вашего бота
 TOKEN = os.getenv("8102277034:AAHPL3s9zgMGGpz3AxR7w3vw-8Zd5pS9_qI")
 print(f"TOKEN is: {TOKEN}")
-bot = telegram.Bot(token=TOKEN)
+bot = telegram.Bot(token="8102277034:AAHPL3s9zgMGGpz3AxR7w3vw-8Zd5pS9_qI")
 
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
